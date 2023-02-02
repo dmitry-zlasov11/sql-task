@@ -12,10 +12,10 @@ SELECT * FROM `users` limit 2;
 SELECT * FROM `users` limit 2,2;
 
 <!--  Выбрать всех пользователей в формате (Фамилия, Имя, Телефон) -->
-SELECT `last_name`, `first_name`, `phone` FROM `users` ORDER BY `last_name`;
+SELECT `last_name`, `first_name`, `phone FROM `users`;
 
 <!-- - Выбрать всех пользователей в формате (Город, Фамилия, Имя, Телефон) с сортировкой, сначала по городу потом по фамилии -->
-SELECT `city`, `last_name`, `first_name`, `phone` FROM `users` ORDER BY `city`, `last_name`;
+SELECT `city`, `last_name`, `first_name`, `phone`FROM `users` ORDER BY `city`, `last_name`;
 
 <!-- - Выбрать всех пользователей в формате (Фамилия И., Телефон, Город) с сортировкой по фамилии. Колонку c "Фамилия И." назвать name -->
 SELECT CONCAT(`last_name`, ' ', SUBSTRING(`first_name`,1,1),'.') AS `name` FROM `users` ORDER BY `last_name`;
