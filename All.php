@@ -58,7 +58,7 @@ SELECT `city`, COUNT(`created_at`) AS `Count` FROM `users` WHERE `created_at` IS
 SELECT `city`, COUNT(`created_at`) AS `number_users` FROM `users` GROUP BY `city` HAVING COUNT(`city`) > 1 ORDER BY COUNT(`created_at`) DESC
 
 <!-- - Вывести всех пользователей у которых почта на Яндексе -->
-SELECT * FROM `users` WHERE `username` LIKE '%yandex.ru';
+SELECT * FROM `users` WHERE `username` LIKE '%yandex%';
 
 <!--Вывести всех пользователей у которых не заполнено поле телефон-->
 SELECT * FROM `users` WHERE `phone` IS NULL OR `phone` = '';
